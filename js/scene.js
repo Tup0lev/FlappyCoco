@@ -48,7 +48,7 @@ TextButton.prototype.hide = function() {
 
 
 var tipsText, loadingText, scoreText;
-var playButton, restartButton, feedbackButton, playBgmButton;
+var playButton, restartButton, feedbackButton, playBgmButton, otherGames;
 
 function setLoadingText(percent) {
   loadingText.setText(
@@ -113,10 +113,23 @@ function createButtons() {
   });
   restartButton.hide();
 
+  otherGames = new TextButton({
+    x: global.phaserGame.width / 2,
+    y: global.phaserGame.height - global.phaserGame.height / 5,
+    anchorX: 0.5,
+    anchorY: 1.5,
+    text: '更多游戏'
+  });
+  otherGames.hide();
+
+
   restartButton.events.onInputUp.add(function() {
     exports.shift('title');
   });
 
+  otherGames.events.onInputUp.add(function() {
+    window.location.replace("https://github.com/Tup0lev/GamesIndex")
+  });
 
   feedbackButton = new TextButton({
     x: 0,
@@ -218,11 +231,13 @@ var scenes = {
   'end': {
     enter: function() {
       restartButton.show();
+      otherGames.show();
       showScore();
     },
 
     exit: function() {
       restartButton.hide();
+      otherGames.hide();
       hideScore();
 
       game.reset();
