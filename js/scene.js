@@ -52,7 +52,7 @@ var playButton, restartButton, feedbackButton, playBgmButton;
 
 function setLoadingText(percent) {
   loadingText.setText(
-    'Loading...\n\n出圈的行程: %s % \n作者：AcFun/Pilipili 图波列夫的设计图'.replace('%s', percent)
+    'Loading...\n\n独轮车的行程: %s % \n作者：AcFun/Pilipili 图波列夫的设计图'.replace('%s', percent)
   );
 }
 
@@ -109,7 +109,7 @@ function createButtons() {
     y: global.phaserGame.height - global.phaserGame.height / 5,
     anchorX: 0.5,
     anchorY: 0.5,
-    text: '来世愿生二刺螈 点击重生'
+    text: '来世愿生hololive 点击重生'
   });
   restartButton.hide();
 
@@ -122,7 +122,7 @@ function createButtons() {
     x: 0,
     y: 0,
     size: '14px',
-    text: '叔叔我啊 真的生气了'
+    text: '肖战百年好合'
   });
 
   feedbackButton.events.onInputUp.add(function() {
@@ -140,7 +140,7 @@ function createButtons() {
     y: 0,
     anchorX: 1,
     size: '14px',
-    text: '我身上有股浓浓的哔哩哔哩味儿'
+    text: '血ya升goo'
   });
 
   playBgmButton.events.onInputUp.add(function() {
@@ -167,7 +167,7 @@ function createScoreText() {
 }
 
 function showScore() {
-  var text = '我给陈睿充了 %s00 年大会员\n自己当了 %s 年批小将\n\哩味儿最浓的一次充了 %s00 年 ';
+  var text = '躲过了 %s00 辆独轮车';
 
   var score = global.score;
   var timeElapsed = global.timeElapsed;

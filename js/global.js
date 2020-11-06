@@ -11,10 +11,10 @@ exports.settings = {
   gap: 300,
   ceiling: false,
   canvas: true,
-  antialias: false,
+  antialias: true,
   debug: false,
-  scoreSounds: 43,
-  hurtSounds: 21
+  scoreSounds: 5,
+  hurtSounds: 2
 };
 
 });

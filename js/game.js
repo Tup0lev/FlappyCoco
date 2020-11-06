@@ -169,7 +169,7 @@ function addScore() {
 
 function updateScoreText() {
   scoreText.setText(
-    '大会员 %s00年'.replace('%s', score)
+    '躲过了 %s00辆独轮车'.replace('%s', score)
   );
 }
 
@@ -181,7 +181,7 @@ function updateTimeElapsed() {
     return;
    timeElapsed = a;
    timeElapsedText.setText(
-     '已守护 %s 年'.replace('%s', timeElapsed)
+     '已直播 %s 秒'.replace('%s', timeElapsed)
    );
 }
 
