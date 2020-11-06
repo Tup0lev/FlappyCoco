@@ -13,7 +13,7 @@ exports.settings = {
   canvas: true,
   antialias: true,
   debug: false,
-  scoreSounds: 5,
+  scoreSounds: 9,
   hurtSounds: 2
 };
 
